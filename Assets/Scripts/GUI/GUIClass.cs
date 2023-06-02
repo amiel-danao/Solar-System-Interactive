@@ -8,7 +8,7 @@ public class GUIClass : MonoBehaviour
 	bool messageIsBeingDisplayed = false;
 	string messageToBeDisplayed;
 	private const string initialMessage = "This is a both a Game and a Simulation of our Solar System. \n" +
-		"The planets the moon and the Space Crafts follow realistic orbits\n" +
+		"The planets and the moon follow realistic orbits\n" +
 		" and the relative sizes of the planets and moon are correct.";
 	private const string secondMessage = "The goal of the Game is to explore all the planets in our galaxy by playing mini games";
 	private const string thirdMessage = "Controls \n" +
@@ -169,36 +169,36 @@ public class GUIClass : MonoBehaviour
 		offX += width + 50f;
 
 		width = 100f;
-		if (GUI.Button (new Rect (offX, y1, width, y2), "Objectives") && messageIsBeingDisplayed == false) {
-			buttonStatus ^= Buttons.objectivesButton;
-			buttonStatus &= Buttons.objectivesButton;
-		}
-		if (buttonStatus == Buttons.objectivesButton) {
-			ShowObjectives ();
-		}
+		//if (GUI.Button (new Rect (offX, y1, width, y2), "Objectives") && messageIsBeingDisplayed == false) {
+		//	buttonStatus ^= Buttons.objectivesButton;
+		//	buttonStatus &= Buttons.objectivesButton;
+		//}
+		//if (buttonStatus == Buttons.objectivesButton) {
+		//	ShowObjectives ();
+		//}
 		offX += width;
 
 		width = 170f;
-		if (GUI.Button (new Rect (offX, y1, width, y2), " Space Crafts ") && messageIsBeingDisplayed == false) {
-			buttonStatus ^= Buttons.spaceCraftButton;
-			buttonStatus &= Buttons.spaceCraftButton;
-		}
-		if (buttonStatus == Buttons.spaceCraftButton) {
-			offY = offSetY;
-			if (GUI.Button (new Rect (offX, y1 + offY, width, y2), "Launch SpaceCraft")) {
-				buttonStatus ^= Buttons.launchSpaceCraftButton;
-				buttonStatus &= Buttons.launchSpaceCraftButton;
-			}
-			offY += offSetY;
-			if (GUI.Button (new Rect (offX, y1 + offY, width, y2), "Course Correction")) {
-				buttonStatus ^= Buttons.courseCorrectionButton;
-				buttonStatus &= Buttons.courseCorrectionButton;
-			}
-		}
-		if (GUI.Button (new Rect (Screen.width - width - offSetX, y1, width, y2), "Settings") && messageIsBeingDisplayed == false) {
-			buttonStatus ^= Buttons.settingsButton;
-			buttonStatus &= Buttons.settingsButton;
-		}
+		//if (GUI.Button (new Rect (offX, y1, width, y2), " Space Crafts ") && messageIsBeingDisplayed == false) {
+		//	buttonStatus ^= Buttons.spaceCraftButton;
+		//	buttonStatus &= Buttons.spaceCraftButton;
+		//}
+		//if (buttonStatus == Buttons.spaceCraftButton) {
+		//	offY = offSetY;
+		//	if (GUI.Button (new Rect (offX, y1 + offY, width, y2), "Launch SpaceCraft")) {
+		//		buttonStatus ^= Buttons.launchSpaceCraftButton;
+		//		buttonStatus &= Buttons.launchSpaceCraftButton;
+		//	}
+		//	offY += offSetY;
+		//	if (GUI.Button (new Rect (offX, y1 + offY, width, y2), "Course Correction")) {
+		//		buttonStatus ^= Buttons.courseCorrectionButton;
+		//		buttonStatus &= Buttons.courseCorrectionButton;
+		//	}
+		//}
+		//if (GUI.Button (new Rect (Screen.width - width - offSetX, y1, width, y2), "Settings") && messageIsBeingDisplayed == false) {
+		//	buttonStatus ^= Buttons.settingsButton;
+		//	buttonStatus &= Buttons.settingsButton;
+		//}
 		if (buttonStatus == Buttons.settingsButton) {
 			//if (GUI.Button (new Rect (Screen.width - width - offSetX, y1 + offSetY, width, y2), "Gravity Multiplier")) {
 			//	buttonStatus ^= Buttons.gravityButton;

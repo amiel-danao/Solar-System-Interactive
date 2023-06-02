@@ -59,7 +59,7 @@ public class CamController : MonoBehaviour
 
 	void Start ()
 	{
-		LockObject (Planet.planetList [Random.Range (0, Planet.planetList.Count - 1)].transform);
+		LockObject (Planet.planetList [1].transform);
 	}
 
 	void LateUpdate ()
